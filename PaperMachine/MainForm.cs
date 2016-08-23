@@ -29,7 +29,7 @@ namespace PaperMachine
         {
             PaperingData pd = (PaperingData)p;
 
-            for (int i = 0; i < pd.num && m_IsThrdRunning; i++)
+            for (int i = 0; i < pd.num && m_IsThrdRunning == true; i++)
             {
                 foreach (var ch in pd.str)
                     SendKeys.SendWait(ch.ToString());
